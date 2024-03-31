@@ -15,16 +15,20 @@
         <p>Fuja do Casaço mental</p>
     </div>
     <div class="input-field">
+        <label for="text">Name:</label>
         <input type="text" placeholder="Nome:">
     </div>
     <div class="input-field">
-        <input type="text" placeholder="Data de nascimento:">
+        <label for="contact">Data de nasc:</label>
+        <input type="date" placeholder="Data de nascimento:">
     </div>
     <div class="input-field">
+        <label for="contact">Email:</label>
         <input type="text" placeholder="Email:">
     </div>
     <div class="input-field">
-        <input type="text" placeholder="Contato:">
+        <label for="contact">Contato:</label>
+        <input type="tel" id="contact" placeholder="Insira seu contato aqui">
     </div>
     <div class="container-sexo">
         <label for="gender">Selecione o sexo:</label>
@@ -39,4 +43,21 @@
     </div>
 </div>
 </body>
+<script>
+    // Adicionando evento de submit ao formulário
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        // Obtendo valores dos campos
+        var name = document.getElementById('name').value;
+        var contact = document.getElementById('contact').value;
+        var birthdate = document.getElementById('birthdate').value;
+        var email = document.getElementById('email').value;
+        var gender = document.getElementById('gender').value;
+
+        // Verificando se algum campo está vazio
+        if (!name || !contact || !birthdate || !email || !gender) {
+            alert('Por favor, preencha todos os campos.');
+            event.preventDefault(); // Impedindo o envio do formulário
+        }
+    });
+</script>
 </html>

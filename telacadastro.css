@@ -8,7 +8,7 @@ body {
   font-family: Kiwi Maru, sans-serif;
 }
 .container {
-  width: 80%;
+  width: 100%;
   max-width: 300px;
   margin: auto;
 }
@@ -39,7 +39,13 @@ body {
   padding: 1vw;
   text-align: center;
   margin-top: 2vw;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
 }
+.button:hover {
+  background-color: rgb(62, 178, 108);
+}
+
 .container-sexo {
   width: 100%;
   max-width: 300px;
