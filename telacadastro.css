@@ -40,6 +40,17 @@ body {
   text-align: center;
   margin-top: 2vw;
 }
+.container-sexo {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+.select-field {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
 
 @media screen and (max-width: 600px) {
   .container {
