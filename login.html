@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/login.css">
+</head>
+<body>
+    
+    <section class="area-login">
+        <div class="login">
+            
+            <form method="post">
+                <h1>login</h1>
+                <label for="email">E-mail</label>
+                <input type="text" name="email" placeholder="Email" autofocus>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" placeholder="senha">
+                <input type="submit" value="entrar">
+            </form>
+                <p>Ainda não tem uma conta?<a href="#">Criar conta</a></p>
+                
+        </div>
+    </section>
+    
+</body>
+<script>
+    function validarFormulario() {
+        var email = document.forms["loginForm"]["email"].value;
+        var senha = document.forms["loginForm"]["senha"].value;
+
+        if (email == "" || senha == "") {
+            alert("Por favor, preencha todos os campos.");
+            return false;
+        }
+    }
+</script>
+</html>

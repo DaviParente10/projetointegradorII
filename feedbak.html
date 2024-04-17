@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./feedbak .css">
+    <title>Formulario feedback</title>
+</head>
+<body>
+    <header><img src="./img/logo.png" alt=""></header>
+    <main>
+    <div class="container">
+        <h2>Deixe seu Feedback</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</main>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('feedbackForm');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+
+        // Validação dos campos
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const feedback = document.getElementById('feedback').value;
+
+        if (name.trim() === '' || email.trim() === '' || feedback.trim() === '') {
+            alert('Por favor, preencha todos os campos.');
+        } else {
+            // Se os campos estiverem preenchidos, o formulário pode ser enviado
+            form.submit();
+        }
+    });
+});
+
+</script>
+</html>
